@@ -1,14 +1,15 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "rohithzr",
-  "description": "Back up and restore your entire Claude Code environment to a private GitHub repo",
+  "name": "stratosjl",
+  "description": "Back up and restore your Claude Code environment (fork of rohithzr/claudebase).",
   "owner": {
-    "name": "Rohit Hazra"
+    "name": "Stratos Laspas",
+    "url": "https://github.com/stratosjl"
   },
   "plugins": [
     {
       "name": "claudebase",
-      "description": "Back up and restore your entire Claude Code environment to a private GitHub repo",
+      "description": "Back up and restore your entire Claude Code environment to a private GitHub repo. Original by Rohit Hazra (rohithzr/claudebase, MIT-licensed).",
       "category": "productivity",
       "source": "./",
       "homepage": "https://github.com/rohithzr/claudebase"

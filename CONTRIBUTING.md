@@ -106,3 +106,17 @@ This project follows the [Contributor Covenant v2.1](https://www.contributor-cov
 ## License
 
 By contributing, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+
+## Fork-specific setup (stratosjl/claudebase only)
+
+This fork renames the marketplace identifier to `stratosjl` and adds an auto-merge driver so monthly upstream merges from `rohithzr/claudebase` do not require manual resolution on `.claude-plugin/marketplace.json`.
+
+After cloning this fork, run once:
+
+```bash
+bash scripts/setup-merge-driver.sh
+```
+
+This registers a custom git merge driver in your local `.git/config`. Without it, upstream merges produce a manual conflict on `.claude-plugin/marketplace.json`. The driver keeps the fork's `name`, `owner`, and `description` fields and takes upstream for everything else (notably new `plugins[]` entries).
+
+Dependencies: `jq` must be on PATH. Setup script is idempotent — safe to re-run.
